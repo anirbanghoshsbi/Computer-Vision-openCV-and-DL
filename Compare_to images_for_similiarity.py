@@ -7,17 +7,20 @@ sum of the squared difference between the two images;
 NOTE: the two images must have the same dimension
 
 
-MSE is dead simple to implement — but when using it for similarity, we can run into problems. The main one being that large distances between pixel intensities do not necessarily mean the contents of the images are dramatically different. I’ll provide some proof for that statement later in this post, but in the meantime, take my word for it.
-
-It’s important to note that a value of 0 for MSE indicates perfect similarity. A value greater than one implies less similarity and will continue to grow as the average difference between pixel intensities increases as well
-
-The SSIM method is clearly more involved than the MSE method, but the gist is that SSIM attempts to model the perceived change in the structural information of the image, whereas MSE is actually estimating the perceived errors. There is a subtle difference between the two, but the results are dramatic.
-
-Furthermore, the equation is used to compare two windows (i.e. small sub-samples) rather than the entire image as in MSE. Doing this leads to a more robust approach that is able to account for changes in the structure of the image, rather than just the perceived change.
-
-The parameters to Equation 2 include the (x, y) location of the N x N window in each image, the mean of the pixel intensities in the x and y direction, the variance of intensities in the x and y direction, along with the covariance.
-
-Unlike MSE, the SSIM value can vary between -1 and 1, where 1 indicates perfect similarity.
+MSE is dead simple to implement — but when using it for similarity, we can run into problems. 
+The main one being that large distances between pixel intensities do not necessarily mean the 
+contents of the images are dramatically different. I’ll provide some proof for that statement 
+later in this post, but in the meantime, take my word for it.It’s important to note that a value 
+of 0 for MSE indicates perfect similarity. A value greater than one implies less similarity and 
+will continue to grow as the average difference between pixel intensities increases as well
+The SSIM method is clearly more involved than the MSE method, but the gist is that SSIM attempts 
+to model the perceived change in the structural information of the image, whereas MSE is actually 
+estimating the perceived errors. There is a subtle difference between the two, but the results are dramatic.
+Furthermore, the equation is used to compare two windows (i.e. small sub-samples) rather than the entire
+image as in MSE. Doing this leads to a more robust approach that is able to account for changes in the
+structure of the image, rather than just the perceived change.
+Unlike MSE, the SSIM value can vary between -1 and 1, where 1 indicates perfect similarity.THE MSE is 0.0
+for perfect co-relation and increases with increase in dissimiliarities between images.
 '''
 # import the necessary packages
 from skimage.measure import compare_ssim as ssim
