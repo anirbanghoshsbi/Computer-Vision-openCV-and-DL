@@ -84,7 +84,9 @@ preds = model.predict(image)
 P = imagenet_utils.decode_predictions(preds)
 
 # loop over the predictions and display the rank-5 predictions +
-# probabilities to our terminal
+# probabilities to our terminal (Rank-5 refers to the top FIVE probabblities)
+# returned by the network.This is important when we consider 
+#classifiying a 1000 category dataset.
 for (i, (imagenetID, label, prob)) in enumerate(P[0]):
 	print("{}. {}: {:.2f}%".format(i + 1, label, prob * 100))
 
