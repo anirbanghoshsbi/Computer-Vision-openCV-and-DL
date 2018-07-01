@@ -30,7 +30,6 @@ This model was developed by Francois Chollet et. al in his 2016 paper Xception; 
 this is extemely small network. having a squeeze and expand module. Where the squeeze module has 1 * 1 and expand module has 1 * 1 , 3 * 3 convolutions. The size of weights of the squeezenet architecture is 4.9 MB.
 
 Final Note : I downloaded the xception architecture weights weighing 92 MB from the internet and using it classified a image to that of an 'koala' in 15 seconds ( including the downloading time.) These weights need to be downloaded only once and the images can be classified in 5 seconds since then.
-Hi
 
 
 
