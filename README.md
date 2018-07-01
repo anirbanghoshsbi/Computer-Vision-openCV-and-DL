@@ -1,5 +1,5 @@
 # Computer-Vision-Python-openCV-and-DL
-Computer Vision and Deep Learning
+Computer Vision and Deep Learning.
 Easy way to implement Deep Learning For Image Classification is to use _pre trained_ network . Training a Neural Network from scratch is difficult , as it requires one to resort to expensive GPU's and can be time consuming. 
 The # trick in using pre-trained network # is to download the weights of these trained network and use these weights to classify the image. 
 The normal training process requires me to do both the forward pass f(x)--->b and do the back propagation , which is basically taking the partial derivatives and adjust the weights so that the mapping between the input and the output is learnt by the network. This process of learning the mapping is stored as weights.
