@@ -10,6 +10,10 @@ VGG19
 ResNet50
 Inception V3
 Xception
+
+# ImageNet Dataset
+These networks were trained on the Imagenet Dataset and can therefore identify _ONLY_ from one of the 1000 classes given in the dataset.Given the lage number of categories that these networks are trained on we use Rank -5 categorization. Which basically means that we return the top 5 images in terms of probabilities.
+
 # VGG networks
 These networks were first introduced by Simonyan and Zisserman in 2014 in their paper Very Deep Convolutional Network for large Scale Image Recognition.. The VGG family of the Network are characterised by 3 * 3 convolution layers stacked over one another , increasing depth.Reducing the volume size is done by the max-pooling. Finally we have two fully connected layers with 4096 nodes and then followed by an softmax classifier.
 Drawbacks of VGG model is that these models are very difficult to train and the network weight themselves are very large 533 MB for VGG16 and 574 MB VGG19.
