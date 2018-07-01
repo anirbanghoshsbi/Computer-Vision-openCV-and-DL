@@ -1,6 +1,8 @@
 # USAGE
 # python imagenet_pretrained.py --image example_images/example_01.jpg --model xception
-
+# The below networks were trained on the imagenet dataset which is a 1000 object category
+# and the weights downloaded can classify ONLY from one of the 1000 categories in imagenet.
+# Imagenet dataset contains dogs , cats , various household objects , vehicle type etc.
 # import the necessary packages
 from keras.applications import ResNet50
 from keras.applications import InceptionV3
