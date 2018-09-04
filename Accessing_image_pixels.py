@@ -2,7 +2,7 @@
 import opencv2
 import argparse
 
-ap = ArgumentParser()
+ap = argparse.ArgumentParser()
 ap.add_argument("-i","--image",help = "path to the image", required = True)
 args = vars(ap.parse_args())
 
