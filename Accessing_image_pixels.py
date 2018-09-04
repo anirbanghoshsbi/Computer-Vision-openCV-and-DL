@@ -1,5 +1,5 @@
 # import the libraries
-import opoencv2
+import opencv2
 import argparse
 
 ap = ArgumentParser()
@@ -15,16 +15,16 @@ print("The image pixels at [1,1] is {r} , {g} ,{b}" .format(r,g,b))
 #calculate the centre
 (h , w) = image[:2]
 (cY , cX) = (h//2 , w//2)
-# display the top  left
+# get the top  left slice
 image_left = image[0:cY , 0:cX]
-#display the top right
+#get the top right slice
 image_right = image[0:cY ,cX:w]
-#display bottom left
+#get the bottom left slice
 image_bleft=image[cY:h,0:cX]
-#display bottom right
+#get the bottom right slice
 image_bright = image[cY:h , cX:w]
 
-# show these images
+# show these image slices
 cv2.imshow("The top left {} image , top right image {} , bottom left image {} , bottom right image {}" . format(image_left , image_right , image_bleft , image_bright))
 
 # Change the color of the top left image slice to green
